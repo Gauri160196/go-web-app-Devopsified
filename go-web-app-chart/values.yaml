@@ -1,0 +1,13 @@
+replicaCount: 2
+
+image:
+  repository: gauri1601/go-web-app
+  tag: last
+
+ingress:
+  enabled: true
+  hosts:
+    - host: go-web-app.local
+      paths:
+        - path: /
+          pathType: Prefix
