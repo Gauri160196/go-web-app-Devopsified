@@ -80,7 +80,7 @@ jobs:
           sed -i 's/tag: .*/tag: "${{github.run_id}}"/' helm/go-web-app/values.yaml
 
       - name : Commit and push changes
-          git config --global user.name 'sGauri160196
+          git config --global user.name 'Gauri160196'
           git config --global user.email 'gaurinarula35@gmail.com'
           git add go-web-app-chart/values.yaml
           git commit -m "Update image tag in Helm chart"
