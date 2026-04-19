@@ -21,12 +21,10 @@ jobs:
 
       - name: build
         run: go build -o go-web-app
-        working-directory: go-web-app-Devopsified/go-web-app
 
       - name: Run tests
         run: |
           go test ./...
-        working-directory: go-web-app-Devopsified/go-web-app
 
   code-quality:
     runs-on: ubuntu-latest
@@ -36,8 +34,6 @@ jobs:
 
       - name: Run golangci-lint
         uses: golangci/golangci-lint-action@v6
-        with:
-         working-directory: go-web-app-Devopsified/go-web-app
 
       - name: Run code quality checks
         run: |
