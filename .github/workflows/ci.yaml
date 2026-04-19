@@ -16,8 +16,6 @@ jobs:
 
       - name: Run golangci-lint
         uses: golangci/golangci-lint-action@v6
-        with:
-        working-directory: go-web-app
 
       - name: Set up Go 1.20
         uses: actions/setup-go@v2
@@ -26,12 +24,10 @@ jobs:
 
       - name: build
         run: go build -o go-web-app
-        working-directory: go-web-app
 
       - name: Run tests
         run: |
           go test ./...
-        working-directory: go-web-app
 
   code-quality:
     runs-on: ubuntu-latest
