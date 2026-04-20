@@ -3,7 +3,7 @@ replicaCount: 2
 image:
   repository: gauri1601/go-web-app
   pullPolicy: IfNotPresent
-  tag: last
+  tag: "24689085596"
 
 ingress:
   enabled: true
