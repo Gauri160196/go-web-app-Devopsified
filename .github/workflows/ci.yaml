@@ -25,7 +25,6 @@ jobs:
       - name: Run tests
         run: |
           go test ./...
-
   code-quality:
     runs-on: ubuntu-latest
     steps:
