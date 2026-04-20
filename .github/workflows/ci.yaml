@@ -1,3 +1,5 @@
+permissions:
+  contents: write
 name:
 on:
   push:
@@ -69,8 +71,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.TOKEN}}
 
       - name: Update Helm chart with new image tag
         run: |
